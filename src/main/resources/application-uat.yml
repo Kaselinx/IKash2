@@ -1,0 +1,69 @@
+com:
+  ikash2:
+    env: uat
+spring:
+  datasource:
+    tle:
+      password: 1234qwer
+      url: jdbc:sqlserver://172.25.221.4;trustServerCertificate=true;databaseName=ACS_TLE
+      username: teamwalk
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    database-platform: org.hibernate.dialect.SQLServer2012Dialect
+    generate-ddl: false
+    hibernate:
+      ddl-auto: validate
+      name:
+          physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+          implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+    properties:
+      hibernate:
+        auto_quote_keyword: false
+        current_session_context_class: thread
+        default_schema: dbo
+        dialect: org.hibernate.dialect.SQLServer2012Dialect
+        enable_lazy_load_no_trans: true
+        format_sq: false
+        generate_statistics: false
+        hbm2ddl:
+          auto: validate
+        show_sql: true
+        type: debug
+        use_nationalized_character_data: false
+        use_sql_comments: false
+        format_sql: false
+        show-sql: true
+        jdbc:
+                    #time_zone: Asia/Taipei
+              batch_size: 50
+              lob:
+                 non_contextual_creation: true
+  main:
+    allow-bean-definition-overriding: true
+dynamic:
+  datasource: {
+    ikash: {
+      username: teamwalk,
+      password: 1234qwer,
+      url: ' url: jdbc:sqlserver://172.25.221.4;trustServerCertificate=true;databaseName=IKash',
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    },
+    ikash1: {
+      username: teamwalk,
+      password: 1234qwer,
+      url: ' url: jdbc:sqlserver://172.25.221.4;trustServerCertificate=true;databaseName=IKash1',
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    },
+    ikash2: {
+      username: teamwalk,
+      password: 1234qwer,
+      url: ' url: jdbc:sqlserver://172.25.221.4;trustServerCertificate=true;databaseName=IKash2',
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    },
+    ikash3: {
+      username: teamwalk,
+      password: 1234qwer,
+      url: ' url: jdbc:sqlserver://172.25.221.4;trustServerCertificate=true;databaseName=IKash3',
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    }
+  }
