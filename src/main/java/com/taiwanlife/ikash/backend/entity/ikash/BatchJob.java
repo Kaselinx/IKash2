@@ -20,6 +20,7 @@ import lombok.ToString;
 @Table(name="BatchJob")
 public class BatchJob {
 	@Id
+	@Column(name="JobID", unique=true)
 	private String JobID;
 	@Column
 	private String JobName;	

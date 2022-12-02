@@ -4,12 +4,8 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
-
-import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
-import com.taiwanlife.ikash.backend.configuration.DatasourceScope;
 import com.taiwanlife.ikash.backend.entity.acs.ADM_MENU;
 import com.taiwanlife.ikash.backend.repository.UserRoleRepository;
 

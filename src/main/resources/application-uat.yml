@@ -5,7 +5,7 @@ spring:
   datasource:
     tle:
       password: 1234qwer
-      url: jdbc:sqlserver://172.25.221.4;trustServerCertificate=true;databaseName=ACS_TLE
+      url: jdbc:sqlserver://127.0.0.1;trustServerCertificate=true;databaseName=ACS_TLE
       username: teamwalk
       driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
   jpa:
@@ -45,25 +45,25 @@ dynamic:
     ikash: {
       username: teamwalk,
       password: 1234qwer,
-      url: ' url: jdbc:sqlserver://172.25.221.4;trustServerCertificate=true;databaseName=IKash',
+      url: ' jdbc:sqlserver://127.0.0.1;trustServerCertificate=true;databaseName=IKASH',
       driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
     },
     ikash1: {
       username: teamwalk,
       password: 1234qwer,
-      url: ' url: jdbc:sqlserver://172.25.221.4;trustServerCertificate=true;databaseName=IKash1',
+      url: ' jdbc:sqlserver://127.0.0.1;trustServerCertificate=true;databaseName=IKASH1',
       driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
     },
     ikash2: {
       username: teamwalk,
       password: 1234qwer,
-      url: ' url: jdbc:sqlserver://172.25.221.4;trustServerCertificate=true;databaseName=IKash2',
+      url: ' jdbc:sqlserver://127.0.0.1;trustServerCertificate=true;databaseName=IKASH2',
       driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
     },
     ikash3: {
       username: teamwalk,
       password: 1234qwer,
-      url: ' url: jdbc:sqlserver://172.25.221.4;trustServerCertificate=true;databaseName=IKash3',
+      url: ' jdbc:sqlserver://127.0.0.1;trustServerCertificate=true;databaseName=IKASH3',
       driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
     }
   }

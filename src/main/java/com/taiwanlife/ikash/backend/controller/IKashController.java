@@ -42,15 +42,14 @@ public class IKashController {
 	
 	@GetMapping("/Menu")
 	public Optional<List<ADM_MENU>> GetAllMenu() {
-		Optional<List<ADM_MENU>> tList = Optional.ofNullable(userRoleService.getAllMenuItem());
+		Optional<List<ADM_MENU>> tList = Optional.ofNullable(userRoleService.getAll());
 		return tList;
 	}
 	
 	@GetMapping("/Batch")
-	public String GetAllBatch() {
-		List<BatchJob> mList =  new ArrayList<BatchJob>();
-		mList.addAll(batchJobService.getAllBatchItem());
-		return JsonUtil.convertObjectToJson(mList);
+	public Optional<List<BatchJob>> GetAllBatch() {
+		Optional<List<BatchJob>> tList = Optional.ofNullable(batchJobService.getAllBatchItem());
+		return tList;
 	}
 
 }

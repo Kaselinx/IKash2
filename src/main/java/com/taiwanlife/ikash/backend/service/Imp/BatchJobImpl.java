@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.taiwanlife.ikash.backend.configuration.DatasourceScope;
+import com.taiwanlife.ikash.backend.configuration.persistence.DBContextHolder;
+import com.taiwanlife.ikash.backend.configuration.persistence.JpaConfig.DBTypeEnum;
 import com.taiwanlife.ikash.backend.entity.ikash.BatchJob;
 import com.taiwanlife.ikash.backend.repository.BatchJobRepository;
 import com.taiwanlife.ikash.backend.service.BatchJobService;
@@ -20,10 +20,11 @@ public class BatchJobImpl implements BatchJobService {
 		this.batchJobRepository = theBatchJobRepository;
 	}
 
-	@DatasourceScope(scope="IKash")
+
 	@Override
 	public List<BatchJob> getAllBatchItem() {
-		return batchJobRepository.getAllBatchItem();
+		DBContextHolder.setCurrentDb(DBTypeEnum.IKASH);
+		return batchJobRepository.findAll();
 	}
 
 }
