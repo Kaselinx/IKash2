@@ -5,6 +5,6 @@ import com.taiwanlife.ikash.backend.entity.acs.ADM_MENU;
 
 public interface UserRoleService {
 
-	List<ADM_MENU> getAllMenuItem();
-	
+	// List<ADM_MENU> getAllMenuItem();
+	List<ADM_MENU> getAll();
 }
