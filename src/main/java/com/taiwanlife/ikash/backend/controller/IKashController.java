@@ -1,11 +1,8 @@
 package com.taiwanlife.ikash.backend.controller;
 
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-
-import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +13,6 @@ import com.taiwanlife.ikash.backend.entity.acs.ADM_MENU;
 import com.taiwanlife.ikash.backend.entity.ikash.BatchJob;
 import com.taiwanlife.ikash.backend.service.BatchJobService;
 import com.taiwanlife.ikash.backend.service.UserRoleService;
-import com.taiwanlife.ikash.backend.utility.JsonUtil;
 import lombok.extern.log4j.Log4j2;
 
 @Log4j2
@@ -35,7 +31,7 @@ public class IKashController {
 	}
 	
 	@GetMapping("/Index")
-	public String HelloSunny() {
+	public String HelloTeam() {
 		log.info("Enter Hello Sunny");
 		return "Welcome to IKash API!";
 	}
