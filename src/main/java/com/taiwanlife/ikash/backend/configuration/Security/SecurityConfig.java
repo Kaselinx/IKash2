@@ -32,7 +32,7 @@ public class SecurityConfig {
     @Bean
     public InMemoryUserDetailsManager users() {
         return new InMemoryUserDetailsManager(
-                User.withUsername("ron")
+                User.withUsername("admin")
                         .password("{noop}password")
                         .authorities("read")
                         .build()
