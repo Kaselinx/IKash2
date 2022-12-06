@@ -1,6 +1,6 @@
 com:
   ikash2:
-    env: uat
+    env: local
 spring:
   mvc:
     format:

@@ -2,6 +2,7 @@ package com.taiwanlife.ikash.backend.service.Imp;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -38,5 +39,11 @@ public class SalesAchievementServiceImpl implements SalesAchievementService{
 	public List<ACT_FYC_ACCEPTFEATS> findMonthlyKYC(String USER_CODE, Date RECE_DATE) {
 		return salesAchievementRepository.findMonthlyKYC(USER_CODE,RECE_DATE);
 	}
+
+	@Override
+	public List<Map<String,Object>>  findJoinKYC() {
+		return salesAchievementRepository.findJoinKYC();
+	}
+
 
 }

@@ -2,6 +2,7 @@ package com.taiwanlife.ikash.backend.service;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import com.taiwanlife.ikash.backend.entity.acs.ACT_FYC_ACCEPTFEATS;
 
@@ -13,4 +14,6 @@ public interface SalesAchievementService {
 	List<ACT_FYC_ACCEPTFEATS> findByAGENT_NAMELike(String AGENT_NAME);
 	
 	List<ACT_FYC_ACCEPTFEATS> findMonthlyKYC(String USER_CODE,  Date RECE_DATE );
+	
+	List<Map<String, Object>>  findJoinKYC();
 }
