@@ -2,6 +2,7 @@ package com.taiwanlife.ikash.backend.controller;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,13 @@ public class HomeController {
 	@GetMapping("/Find_ALL_ACCEPTFEATS")
 	public Optional<List<ACT_FYC_ACCEPTFEATS>>  FindAll() {
 		Optional<List<ACT_FYC_ACCEPTFEATS>> tList = Optional.ofNullable(salesAchievementRepository.findAll());
+		return tList;
+	}
+	
+	
+	@GetMapping("/FINDJOINKYC")
+	public Optional<List<Map<String, Object>>> FindJoinFYC(){
+		Optional<List<Map<String, Object>>> tList = Optional.ofNullable(salesAchievementRepository.findJoinKYC());
 		return tList;
 	}
 	

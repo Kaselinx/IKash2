@@ -24,6 +24,7 @@ import org.springframework.dao.annotation.PersistenceExceptionTranslationPostPro
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing ;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories ;
 import org.springframework.instrument.classloading.InstrumentationLoadTimeWeaver ;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator ;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.orm.jpa.JpaTransactionManager ;
@@ -173,6 +174,35 @@ public class JpaConfig {
     		return dsBuilder.build();
         //return DataSourceBuilder.create().type(HikariDataSource.class).build();
     }
+    
+    @Bean
+    public JdbcTemplate tleJdbcTemplate(@Qualifier("mainDataSource") DataSource dataSource) {
+        return new JdbcTemplate(dataSource);
+    }
+
+    
+    @Bean
+    public JdbcTemplate ikashJdbcTemplate(@Qualifier("ikashDataSource") DataSource dataSource) {
+        return new JdbcTemplate(dataSource);
+    }
+
+    
+    @Bean
+    public JdbcTemplate ikash1JdbcTemplate(@Qualifier("ikash1DataSource") DataSource dataSource) {
+        return new JdbcTemplate(dataSource);
+    }
+
+    
+    @Bean
+    public JdbcTemplate ikash2JdbcTemplate(@Qualifier("ikash2DataSource") DataSource dataSource) {
+        return new JdbcTemplate(dataSource);
+    }
+    
+    @Bean
+    public JdbcTemplate ikash3JdbcTemplate(@Qualifier("ikash3DataSource") DataSource dataSource) {
+        return new JdbcTemplate(dataSource);
+    }
+
     
     @Bean(name = "multiRoutingDataSource")
     public DataSource multiRoutingDataSource() {
