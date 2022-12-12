@@ -1,6 +1,16 @@
 com:
   ikash2:
     env: uat
+    meme: ronisverycoolguy
+components:
+  securitySchemes:
+      ApiKey:
+         type: apiKey
+         name: Authorization
+         in: header
+         description: 'Prefix the value with \"ApiKey\" to indicate the custom authorization type' 
+security:
+   - ApiKey: [ronisverycoolguy]
 spring:
   mvc:
     format:
@@ -45,6 +55,7 @@ spring:
                  non_contextual_creation: true
   main:
     allow-bean-definition-overriding: true
+    allow-circular-references: true
 dynamic:
   datasource: {
     ikash: {
